@@ -14,49 +14,67 @@
     }
     .header {
       text-align: center;
-      padding: 48px 20px 32px;
-      background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+      padding: 56px 20px 40px;
+      background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
       border-bottom: 1px solid #e8f0fe;
     }
-    .header .badge {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      color: #2563eb;
-      background: #eff6ff;
-      padding: 6px 16px;
-      border-radius: 20px;
-      margin-bottom: 16px;
-      text-transform: uppercase;
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .logo-wrap img {
+      height: 48px;
+      width: auto;
     }
     .header h1 {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 700;
       color: #0f172a;
       margin-bottom: 8px;
+      letter-spacing: -0.5px;
     }
     .header .subtitle {
       font-size: 16px;
       color: #64748b;
+      font-weight: 400;
     }
     .projects {
-      max-width: 920px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 40px 20px 60px;
+      padding: 48px 20px 64px;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      padding-left: 4px;
+    }
+    .section-title .line {
+      width: 4px;
+      height: 24px;
+      background: linear-gradient(180deg, #2563eb, #1d4ed8);
+      border-radius: 2px;
+    }
+    .section-title h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
     }
     .project-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 16px;
+      border-radius: 20px;
       overflow: hidden;
-      margin-bottom: 40px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-bottom: 44px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
     .project-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.10);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.12);
     }
     .project-card img {
       display: block;
@@ -65,10 +83,10 @@
       border-bottom: 1px solid #f1f5f9;
     }
     .project-info {
-      padding: 20px 24px 24px;
+      padding: 24px 28px 28px;
     }
-    .project-info h2 {
-      font-size: 20px;
+    .project-info h3 {
+      font-size: 22px;
       font-weight: 700;
       color: #0f172a;
       margin-bottom: 6px;
@@ -76,47 +94,77 @@
     .project-info p {
       font-size: 14px;
       color: #64748b;
+      line-height: 1.7;
+    }
+    .project-info .tag {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #2563eb;
+      background: #eff6ff;
+      padding: 4px 10px;
+      border-radius: 6px;
     }
     .footer {
       text-align: center;
-      padding: 24px 20px;
-      font-size: 12px;
+      padding: 32px 20px;
+      font-size: 13px;
       color: #94a3b8;
       border-top: 1px solid #f1f5f9;
     }
+    .footer img {
+      height: 20px;
+      width: auto;
+      opacity: 0.6;
+      margin-bottom: 6px;
+    }
     @media (max-width: 640px) {
-      .header h1 { font-size: 24px; }
-      .project-info h2 { font-size: 18px; }
+      .header { padding: 40px 16px 32px; }
+      .header h1 { font-size: 26px; }
+      .logo-wrap img { height: 36px; }
+      .project-info h3 { font-size: 18px; }
+      .projects { padding: 32px 16px 48px; }
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <div class="badge">科创之光 INNOSPARK</div>
+    <div class="logo-wrap">
+      <img src="logo.png" alt="科创之光 INNOSPARK">
+    </div>
     <h1>未来科创家计划</h1>
-    <p class="subtitle">Project Showcase</p>
+    <p class="subtitle">Project Showcase · 科创项目展示</p>
   </div>
 
   <div class="projects">
+    <div class="section-title">
+      <div class="line"></div>
+      <h2>本期项目</h2>
+    </div>
+
     <div class="project-card">
       <img src="qinghang.jpg" alt="清航时代 - 飞行器长续航大载重能源动力系统">
       <div class="project-info">
-        <h2>清航时代</h2>
+        <h3>清航时代</h3>
         <p>飞行器长续航大载重能源动力系统提供者</p>
+        <span class="tag">新能源 · 航空动力</span>
       </div>
     </div>
 
     <div class="project-card">
       <img src="unicone.jpg" alt="甜筒UniCone - 持续感知、记录个人数据的主动式服务AI">
       <div class="project-info">
-        <h2>甜筒 UniCone</h2>
+        <h3>甜筒 UniCone</h3>
         <p>打造全球领先的持续感知、记录个人数据的主动式服务AI</p>
+        <span class="tag">AI Agent · 人机关系</span>
       </div>
     </div>
   </div>
 
   <div class="footer">
-    © 科创之光 INNOSPARK · 未来科创家计划
+    <img src="logo.png" alt="科创之光">
+    <p>科创之光 INNOSPARK · 未来科创家计划</p>
   </div>
 </body>
 </html>
